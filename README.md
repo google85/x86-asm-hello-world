@@ -4,6 +4,7 @@
 
 - using custom `.devcontainer` that includes:
     - [hexdump](from `bsdmainutils` package)
+    - [ld](from `binutils` package)
     - [nasm](https://nasm.us/docs/3.01/)
 
 #

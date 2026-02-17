@@ -3,7 +3,7 @@ SRC_FILE := hello_world
 SRC_DIR := ./src
 BUILD_DIR := ./build
 SRC_IN := ${SRC_DIR}/${SRC_FILE}.asm
-BIN_OUT := ${BUILD_DIR}/${SRC_FILE}.o
+BIN_OUT := ${BUILD_DIR}/${SRC_FILE}
 BUILD_CC:=nasm
 BUILD_FLAGS:=-f elf32
 
@@ -16,7 +16,10 @@ help:
 .PHONY: build
 build:
 	@mkdir -p ${BUILD_DIR} && chown 1000:1000 ${BUILD_DIR}
-	${BUILD_CC} $(BUILD_FLAGS) -o ${BIN_OUT} ${SRC_IN}
+	${BUILD_CC} $(BUILD_FLAGS) -o ${BIN_OUT}.o ${SRC_IN}
+	# hexdump -C ${BIN_OUT}.o
+	# link
+	ld -m elf_i386 -o ${BIN_OUT} ${BIN_OUT}.o
 	hexdump -C ${BIN_OUT}
 
 ## clean: Clean-up the build binaries

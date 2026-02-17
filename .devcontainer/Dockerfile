@@ -33,11 +33,12 @@ ARG USER_UID=1000
 ARG USER_GID=1000
 
 # bsdmainutils - includes hexdump
+# binutils     - includes ld
 RUN set -eux; \
     apt-get update && \
     apt-get install -y --no-install-recommends \
         make wget git ssh sudo \
-        bsdmainutils && \
+        bsdmainutils binutils && \
     rm -rf /var/lib/apt/lists/*
 
 RUN set -eux; \
