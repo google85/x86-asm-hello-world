@@ -1,0 +1,19 @@
+name: x86-asm-devcontainer
+
+services:
+  devcontainer:
+    image: x86-asm-dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NASM_VERSION: 3.01
+    hostname: devcontainer
+    working_dir: /usr/src/app
+    environment:
+      - TZ=Europe/Bucharest
+    volumes:
+      - ..:/usr/src/app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    tty: true

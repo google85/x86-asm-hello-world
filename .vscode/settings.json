@@ -1,0 +1,9 @@
+{
+    "json.schemaDownload.enable": false, // disables warning
+    "editor.formatOnSave": false,
+    "files.associations": {
+        ".env": "ini",
+        "*.asm": "asm-intel-x86-generic"
+    },
+    "editor.fontSize": 15
+}
