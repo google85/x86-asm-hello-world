@@ -9,6 +9,12 @@
 
 #
 
+- Documentation:
+    - ```bash man 2 write```
+    - ```bash man 2 exit```
+
+#
+
 ### Usage:
 ```bash
 make build
