@@ -17,7 +17,7 @@ _start:
     ;
     ; #include <unistd.h>
     ; void main() {
-    ;     write(1, "Hello!\n", 8);
+    ;     write(1, "Hello World\n", 12);
     ; }
 
     ; now gracefully exit
