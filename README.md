@@ -19,3 +19,10 @@
 ```bash
 make build
 ```
+
+### Equivalent C build:
+```bash
+gcc -nostdlib -nostartfiles -static -O2 -s -o ./build/hello-world.equiv-02 ./src/hello_world.equivalent-02.c -lc
+# doesn't work yet
+gcc -nostdlib -nostartfiles -static -s -o ./build/hello-world.equiv-01 ./src/hello_world.equivalent.c
+```
